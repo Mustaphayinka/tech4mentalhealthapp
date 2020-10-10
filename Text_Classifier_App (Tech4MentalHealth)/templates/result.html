@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{url_for('static', filename='./css/bootstrap.min.css')}}">
+  </head>
+
+  <body>
+      <div class="jumbotron bg-success text-center" style="border-radius:0; height:10%;">
+        <div class="container">
+          <h2 class="font-weight-bold">Tech4MentalHealth</h2>
+          <h3>Classify Text from university students towards a mental health chatbot</h3><br>
+          <p class="font-italic text-white">A Machine Learning Web application Built With Flask</p>
+        </div>
+      </div>
+    <br><br>
+
+    <div class="container" style="font-size:2rem;">
+      <p class="text-center">{{"The text belongs to Depression" if prediction == 'Depression'}}</p>
+      <p class="text-center">{{"The text belongs to Drugs" if prediction == 'Drugs'}}</p>
+      <p class="text-center">{{"The text belongs to Alcohol" if prediction == 'Alcohol'}}</p>
+      <p class="text-center">{{"The text belongs to Suicide" if prediction == 'Suicide'}}</p>
+    </div>
+    <br>
+
+    <div class="container text-center">
+      <h3 class="text-success">Probability Value</h3>
+      <p class="text-center">{{pred}}</p>
+    </div>
+      <br> <br>
+    <div class="container text-center">
+      <a href="/" class="btn text-success" style="border:2px solid">HOME</a>
+
+    </div>
+
+  </body>
+</html>
